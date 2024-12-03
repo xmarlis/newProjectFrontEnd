@@ -1,0 +1,82 @@
+/* #course-info {
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+} */
+
+.course-info-section {
+  padding: 60px 15px;
+}
+
+.course-info-section {
+  padding: 60px 15px;
+}
+
+@media (max-width: 768px) {
+  .course-info-section {
+    padding: 40px 10px;
+  }
+
+  .grid-template-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-template-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-gap: 20px; /* Spacing between icons */
+  justify-items: center; /* Center each item horizontally */
+  align-items: center; /* Center each item vertically */
+  row-gap: 80px;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0px 4px 10px var(--text-shadow-color); /* Add shadow on hover */
+}
+
+@media (max-width: 768px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .icon-grid {
+    grid-template-columns: 1fr; /* Single column on extra small screens */
+  }
+}
+
+.course-info-section {
+  background-color: var(--background-light); /* Background color */
+  color: var(--text-color); /* Text color */
+}
+
+h1,
+h2 {
+  color: var(--header-color); /* Primary color for headings */
+  font-weight: bold;
+  text-shadow: 0px 2px 6px var(--text-shadow-color);
+}
+
+.icon:hover {
+  box-shadow: 0px 4px 10px var(--text-shadow-color); /* Box shadow using shadow-color */
+}

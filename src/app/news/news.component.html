@@ -1,0 +1,277 @@
+<h1 id="breakWelcome" style="margin-top: 55px !important">
+  Welcome to our exclusive News section!
+</h1>
+
+<h2 class="font-semibold">Featured articles</h2>
+<div id="displayCard">
+  <div
+    style="position: relative"
+    *ngFor="let article of featuredArticles; let i = index"
+    id="cardSize"
+    class="max-w-sm m-3 g-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  >
+    <a routerLink="/featuredArticle/{{ i }}">
+      <img
+        id="imageStretch"
+        class="rounded-t-md"
+        src="{{ article.img }}"
+        alt=""
+      />
+    </a>
+
+    <div class="p-3">
+      <a routerLink="/featuredArticle/{{ i }}">
+        <h5
+          id="breakFeaturedTitle"
+          style="font-size: 17px"
+          class="mb-1 font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{ article.title }}
+        </h5>
+      </a>
+      <p
+        id="breakPara"
+        style="font-size: 14px"
+        class="mb-3 text-gray-700 dark:text-gray-400"
+      >
+        {{ article.para }}
+      </p>
+      <div>
+        <a
+          id="breakButton"
+          style="position: absolute; top: 87%; left: 5%"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          routerLink="/featuredArticle/{{ i }}"
+        >
+          Read more
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="height: 1px; background-color: darkred"></div>
+
+<h2
+  style="margin-top: 25px !important; margin-bottom: 5px !important"
+  class="font-semibold"
+>
+  Our new Posts
+</h2>
+
+<div
+  id="gridStyles"
+  style="
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 90vw !important;
+    margin-left: 5vw;
+  "
+>
+  <a
+    id="cardStyles2"
+    style="height: 256px; position: relative"
+    *ngFor="let article of generalArticles; let i = index"
+    routerLink="/article/{{ i }}"
+    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+  >
+    <img
+      id="breakingImg"
+      class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+      src="{{ article.img }}"
+      alt=""
+    />
+    <div
+      style="padding-top: 0px !important; margin-top: 0px !important"
+      class="p-2"
+    >
+      <h5
+        id="breakTitle2"
+        style="
+          font-size: 17px;
+          position: absolute;
+          top: 9%;
+          padding: 0px !important;
+        "
+        class="text-l font-semibold tracking-tight text-gray-900 dark:text-white"
+      >
+        {{ article.title }}
+      </h5>
+      <p
+        id="breakPara2"
+        style="font-size: 14px; position: absolute; top: 35%"
+        class="mb-1 font-normal text-gray-700 dark:text-gray-400"
+      >
+        {{ article.para }}
+      </p>
+      <a
+        id="breakButton2"
+        style="position: absolute; top: 78%; left: 59%"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        routerLink="/article/{{ i }}"
+      >
+        Read more
+        <svg
+          class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9"
+          />
+        </svg>
+      </a>
+    </div>
+  </a>
+</div>
+<div class="marquee-container">
+  <div class="label">NEWSTICKER</div>
+  <div class="marquee">
+    <span
+      >+++Russia: Tech industry demands more transparency on AI regulation +++
+      Nvidia launches new AI-based tools for content creators +++ Tesla to roll
+      out full self-driving feature to European customers +++ Japan: Automaker
+      Honda invests $5 billion in robotics and AI research +++ Apple and Google
+      join forces for new app development standards on privacy +++ Ford partners
+      with AI firm to develop self-driving technology for cars +++ South Korea:
+      Samsung showcases next-gen AI capabilities at tech summit +++ Facebook's
+      parent company Meta reveals new VR headset for gaming +++ China: New
+      regulations introduced for facial recognition technology in public spaces
+      +++ Microsoft's new AI tool aids small businesses with automated customer
+      support +++ Amazon’s AI-powered retail assistant changes the shopping
+      experience forever +++ European Union tightens regulations on AI ethics
+      and data privacy standards +++ Musk's Neuralink wants to control robot
+      arms through thought +++ Nvidia CEO praises China's contribution to AI
+      development +++ SoftBank to boost OpenAI stake with up to $1.5bn
+      investment +++ Bluesky breaching rules around disclosure of information,
+      says EU +++ Apple unveils new mixed-reality headset at WWDC 2024 +++
+      Google's AI chatbot Bard introduces multimodal features +++ Tesla
+      introduces autonomous truck technology for freight transport +++ Meta's
+      new AI-powered video creation tool goes live +++ Microsoft's AI assistant
+      integrated into Windows 11 +++ AI tool helps scientists discover new
+      antibiotics in days +++ Amazon’s new quantum computing service promises
+      faster problem-solving +++ Meta and Instagram testing new AI-powered
+      moderation tools +++ Samsung announces new foldable OLED screens for 2025
+      models +++ Adobe unveils AI-driven creative software for marketers +++
+      Twitter redesigns platform with new AI features +++ China: Prime minister
+      discusses government-backed AI regulations +++ Alibaba launches next-gen
+      AI chip for cloud computing +++ Intel announces breakthrough in quantum
+      computing research +++ Spotify integrates AI-based music recommendations
+      in its playlist curation +++ Huawei to build a new data center in Europe
+      as part of 5G rollout +++ TikTok releases new algorithm update to curb
+      misinformation +++ Microsoft expands AI tools for education with new
+      partnerships +++ ByteDance's TikTok builds new AI system for personalized
+      content delivery +++ Amazon to invest $10 billion in autonomous drone
+      delivery services +++ India: Government pushes forward with plans for
+      nationwide 5G rollout +++ Sony reveals AI-enhanced PlayStation gaming
+      experience at CES 2024 +++ OpenAI’s GPT-5 rumored to launch in mid-2025
+      with major improvements +++ Apple announces new environmental initiatives
+      for tech sustainability +++ Google Cloud to invest $2 billion in expanding
+      data centers worldwide +++Russia: Tech industry demands more transparency
+      on AI regulation +++ Nvidia launches new AI-based tools for content
+      creators +++ Tesla to roll out full self-driving feature to European
+      customers +++ Japan: Automaker Honda invests $5 billion in robotics and AI
+      research +++ Apple and Google join forces for new app development
+      standards on privacy +++ Ford partners with AI firm to develop
+      self-driving technology for cars +++ South Korea: Samsung showcases
+      next-gen AI capabilities at tech summit +++ Facebook's parent company Meta
+      reveals new VR headset for gaming +++ China: New regulations introduced
+      for facial recognition technology in public spaces +++ Microsoft's new AI
+      tool aids small businesses with automated customer support +++ Amazon’s
+      AI-powered retail assistant changes the shopping experience forever +++
+      European Union tightens regulations on AI ethics and data privacy
+      standards +++ Musk's Neuralink wants to control robot arms through thought
+      +++ Nvidia CEO praises China's contribution to AI development +++ SoftBank
+      to boost OpenAI stake with up to $1.5bn investment +++ Bluesky breaching
+      rules around disclosure of information, says EU +++ Apple unveils new
+      mixed-reality headset at WWDC 2024 +++ Google's AI chatbot Bard introduces
+      multimodal features +++ Tesla introduces autonomous truck technology for
+      freight transport +++ Meta's new AI-powered video creation tool goes live
+      +++ Microsoft's AI assistant integrated into Windows 11 +++ AI tool helps
+      scientists discover new antibiotics in days +++ Amazon’s new quantum
+      computing service promises faster problem-solving +++ Meta and Instagram
+      testing new AI-powered moderation tools +++ Samsung announces new foldable
+      OLED screens for 2025 models +++ Adobe unveils AI-driven creative software
+      for marketers +++ Twitter redesigns platform with new AI features +++
+      China: Prime minister discusses government-backed AI regulations +++
+      Alibaba launches next-gen AI chip for cloud computing +++ Intel announces
+      breakthrough in quantum computing research +++ Spotify integrates AI-based
+      music recommendations in its playlist curation +++ Huawei to build a new
+      data center in Europe as part of 5G rollout +++ TikTok releases new
+      algorithm update to curb misinformation +++ Microsoft expands AI tools for
+      education with new partnerships +++ ByteDance's TikTok builds new AI
+      system for personalized content delivery +++ Amazon to invest $10 billion
+      in autonomous drone delivery services +++ India: Government pushes forward
+      with plans for nationwide 5G rollout +++ Sony reveals AI-enhanced
+      PlayStation gaming experience at CES 2024 +++ OpenAI’s GPT-5 rumored to
+      launch in mid-2025 with major improvements +++ Apple announces new
+      environmental initiatives for tech sustainability +++ Google Cloud to
+      invest $2 billion in expanding data centers worldwide +++Russia: Tech
+      industry demands more transparency on AI regulation +++ Nvidia launches
+      new AI-based tools for content creators +++ Tesla to roll out full
+      self-driving feature to European customers +++ Japan: Automaker Honda
+      invests $5 billion in robotics and AI research +++ Apple and Google join
+      forces for new app development standards on privacy +++ Ford partners with
+      AI firm to develop self-driving technology for cars +++ South Korea:
+      Samsung showcases next-gen AI capabilities at tech summit +++ Facebook's
+      parent company Meta reveals new VR headset for gaming +++ China: New
+      regulations introduced for facial recognition technology in public spaces
+      +++ Microsoft's new AI tool aids small businesses with automated customer
+      support +++ Amazon’s AI-powered retail assistant changes the shopping
+      experience forever +++ European Union tightens regulations on AI ethics
+      and data privacy standards +++ Musk's Neuralink wants to control robot
+      arms through thought +++ Nvidia CEO praises China's contribution to AI
+      development +++ SoftBank to boost OpenAI stake with up to $1.5bn
+      investment +++ Bluesky breaching rules around disclosure of information,
+      says EU +++ Apple unveils new mixed-reality headset at WWDC 2024 +++
+      Google's AI chatbot Bard introduces multimodal features +++ Tesla
+      introduces autonomous truck technology for freight transport +++ Meta's
+      new AI-powered video creation tool goes live +++ Microsoft's AI assistant
+      integrated into Windows 11 +++ AI tool helps scientists discover new
+      antibiotics in days +++ Amazon’s new quantum computing service promises
+      faster problem-solving +++ Meta and Instagram testing new AI-powered
+      moderation tools +++ Samsung announces new foldable OLED screens for 2025
+      models +++ Adobe unveils AI-driven creative software for marketers +++
+      Twitter redesigns platform with new AI features +++ China: Prime minister
+      discusses government-backed AI regulations +++ Alibaba launches next-gen
+      AI chip for cloud computing +++ Intel announces breakthrough in quantum
+      computing research +++ Spotify integrates AI-based music recommendations
+      in its playlist curation +++ Huawei to build a new data center in Europe
+      as part of 5G rollout +++ TikTok releases new algorithm update to curb
+      misinformation +++ Microsoft expands AI tools for education with new
+      partnerships +++ ByteDance's TikTok builds new AI system for personalized
+      content delivery +++ Amazon to invest $10 billion in autonomous drone
+      delivery services +++ India: Government pushes forward with plans for
+      nationwide 5G rollout +++ Sony reveals AI-enhanced PlayStation gaming
+      experience at CES 2024 +++ OpenAI’s GPT-5 rumored to launch in mid-2025
+      with major improvements +++ Apple announces new environmental initiatives
+      for tech sustainability +++ Google Cloud to invest $2 billion in expanding
+      data centers worldwide +++</span
+    >
+  </div>
+</div>
+
+<p style="position: absolute; top: 1280px; left: 0%">.</p>

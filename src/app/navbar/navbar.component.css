@@ -1,0 +1,113 @@
+* {
+  cursor: pointer;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+.navbar-nav .nav-link {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+/* Ensure navbar and toggle are responsive */
+.navbar-toggler {
+  display: block;
+}
+
+.navbar-collapse {
+  display: none;
+}
+
+.navbar-collapse.show {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none; /* Hide the hamburger button on large screens */
+  }
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--background-color);
+  box-shadow: 0 4px 6px var(--text-shadow-color);
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: var(--text-color);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--header-color);
+}
+
+/* Navbar Brand (Logo) */
+.navbar-brand {
+  color: var(--header-color);
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: var(--accent-color);
+}
+
+/* Navbar Toggler for Mobile View */
+.navbar-toggler {
+  border-color: var(--header-color);
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  background-color: var(--header-color);
+  font-weight: bold;
+}
+
+.navbar-nav {
+  margin-left: 60px; /* Adjust this value to your preference */
+}
+
+/* Active link styling */
+.navbar-nav .nav-item .nav-link.active {
+  /* font-weight: bold;  */
+  /* Make active link bold */
+  /* color: var(--accent-color); */
+  /* Custom color for active link */
+  /* text-decoration: underline; */
+  /* Underline the active link */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: var(--text-color);
+  /* Default text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--header-color); /* Hover color */
+}
+
+.custom-navbar {
+  background-color: var(
+    --background-color
+  ); /* Dark background color for the navbar */
+}

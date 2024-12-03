@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --header-color: #4139d6; /* color used for all headers*/
+  --text-shadow-color: #0000003d; /* color used for shadows*/
+  --news-background-color: #937ce2;
+  --newsticker-background-color: #6445c9;
+  --background-color: #e9e8e8;
+  --background-light: #ffffff;
+  --text-color: #555555;
+  --accent-color: #0066cc;
+
+  /* offer colors */
+  --offer-color-1: #0000ff;
+  --offer-color-2: #401ed7;
+  --offer-color-3: #5f06b8;
+  --offer-shade-color: #a4cbf4;
+  --box-shadow-color: #0000001a;
+  --box-shadow-hover-color: #00000066;
+  --box-shadow-hover-color: #00000099;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}

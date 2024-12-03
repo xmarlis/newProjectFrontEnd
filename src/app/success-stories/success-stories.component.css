@@ -1,0 +1,133 @@
+/* General Section Styling */
+#success-stories {
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+/* Swiper Container Wrapper */
+.swiper-container-wrapper {
+  max-width: 1000px;
+  margin: 20px auto;
+  width: 90%;
+}
+
+/* Swiper */
+.swiper {
+  height: 450px;
+}
+
+.swiper-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Pagination Styling */
+.swiper-pagination {
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  /* background-color: #007bff; */
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+  /* background-color: #0056b3; */
+  opacity: 1;
+}
+
+/* Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  /* color: white; */
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px var(--text-shadow-color);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  /* background-color: #007bff; */
+  transform: scale(1.1);
+}
+
+.swiper-button-next {
+  right: 5px; /* Keep closer to the swiper */
+}
+
+.swiper-button-prev {
+  left: 5px; /* Keep closer to the swiper */
+}
+
+/* Slide Caption */
+#slide-caption {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 15px; /* Keep caption closer to the swiper */
+  /* color: #333; */
+  font-style: italic;
+  padding: 10px 20px;
+  max-width: 800px;
+  margin: 10px auto 0;
+}
+
+/* Example for screens smaller than 768px */
+@media (max-width: 768px) {
+  .swiper {
+    height: 350px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+#success-stories {
+  background-color: var(--background-light); /* Background color */
+  color: var(--text-color); /* Text color */
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--header-color); /* Primary color for bullets */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--accent-color); /* Accent color for active bullets */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--background-light); /* Button icon color */
+  background-color: var(--text-shadow-color);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: var(--header-color); /* Hover background color */
+}
+
+#slide-caption {
+  color: var(--text-color); /* Caption text color */
+}
+h1 {
+  color: var(--header-color);
+  font-weight: bold;
+  text-shadow: 0px 2px 6px var(--text-shadow-color);
+}
