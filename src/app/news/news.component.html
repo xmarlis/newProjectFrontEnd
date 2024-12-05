@@ -1,130 +1,73 @@
-<h1 id="breakWelcome" style="margin-top: 55px !important">
-  Welcome to our exclusive News section!
-</h1>
+<h1 id="breakWelcome">Welcome to our exclusive News section!</h1>
 
-<h2 class="font-semibold">Featured articles</h2>
+<h2 class="font-semibold">Featured Articles</h2>
 <div id="displayCard">
   <div
-    style="position: relative"
     *ngFor="let article of featuredArticles; let i = index"
     id="cardSize"
-    class="max-w-sm m-3 g-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    class="card"
   >
     <a routerLink="/featuredArticle/{{ i }}">
       <img
         id="imageStretch"
-        class="rounded-t-md"
+        class="card-image"
         src="{{ article.img }}"
-        alt=""
+        alt="{{ article.title }}"
       />
     </a>
-
-    <div class="p-3">
+    <div class="card-content">
       <a routerLink="/featuredArticle/{{ i }}">
-        <h5
-          id="breakFeaturedTitle"
-          style="font-size: 17px"
-          class="mb-1 font-bold tracking-tight text-gray-900 dark:text-white"
-        >
-          {{ article.title }}
-        </h5>
+        <h5 id="breakFeaturedTitle" class="card-title">{{ article.title }}</h5>
       </a>
-      <p
-        id="breakPara"
-        style="font-size: 14px"
-        class="mb-3 text-gray-700 dark:text-gray-400"
+      <p id="breakPara" class="card-description">{{ article.para }}</p>
+      <a
+        id="breakButton"
+        class="read-more-btn"
+        routerLink="/featuredArticle/{{ i }}"
       >
-        {{ article.para }}
-      </p>
-      <div>
-        <a
-          id="breakButton"
-          style="position: absolute; top: 87%; left: 5%"
-          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          routerLink="/featuredArticle/{{ i }}"
+        Read more
+        <svg
+          class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 10"
         >
-          Read more
-          <svg
-            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </a>
-      </div>
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9"
+          />
+        </svg>
+      </a>
     </div>
   </div>
 </div>
 
-<div style="height: 1px; background-color: darkred"></div>
+<div class="divider"></div>
 
-<h2
-  style="margin-top: 25px !important; margin-bottom: 5px !important"
-  class="font-semibold"
->
-  Our new Posts
-</h2>
-
-<div
-  id="gridStyles"
-  style="
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    width: 90vw !important;
-    margin-left: 5vw;
-  "
->
+<h2 class="font-semibold">Our New Posts</h2>
+<div id="gridStyles">
   <a
-    id="cardStyles2"
-    style="height: 256px; position: relative"
     *ngFor="let article of generalArticles; let i = index"
+    id="cardStyles2"
+    class="grid-card"
     routerLink="/article/{{ i }}"
-    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
   >
     <img
       id="breakingImg"
-      class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+      class="grid-card-image"
       src="{{ article.img }}"
-      alt=""
+      alt="{{ article.title }}"
     />
-    <div
-      style="padding-top: 0px !important; margin-top: 0px !important"
-      class="p-2"
-    >
-      <h5
-        id="breakTitle2"
-        style="
-          font-size: 17px;
-          position: absolute;
-          top: 9%;
-          padding: 0px !important;
-        "
-        class="text-l font-semibold tracking-tight text-gray-900 dark:text-white"
-      >
-        {{ article.title }}
-      </h5>
-      <p
-        id="breakPara2"
-        style="font-size: 14px; position: absolute; top: 35%"
-        class="mb-1 font-normal text-gray-700 dark:text-gray-400"
-      >
-        {{ article.para }}
-      </p>
+    <div class="grid-card-content">
+      <h5 id="breakTitle2" class="grid-card-title">{{ article.title }}</h5>
+      <p id="breakPara2" class="grid-card-description">{{ article.para }}</p>
       <a
         id="breakButton2"
-        style="position: absolute; top: 78%; left: 59%"
-        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="read-more-btn"
         routerLink="/article/{{ i }}"
       >
         Read more
@@ -147,6 +90,8 @@
     </div>
   </a>
 </div>
+
+
 <div class="marquee-container">
   <div class="label">NEWSTICKER</div>
   <div class="marquee">
@@ -274,4 +219,4 @@
   </div>
 </div>
 
-<p style="position: absolute; top: 1280px; left: 0%">.</p>
+<!-- <p style="position: absolute; top: 1280px; left: 0%">.</p> -->
