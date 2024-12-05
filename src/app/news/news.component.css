@@ -160,7 +160,7 @@ h2 {
   display: flex;
   width: 100%;
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   background-color: var(--background-dark);
   z-index: 1;
@@ -197,6 +197,7 @@ h2 {
   left: 100%;
   animation: marquee 2700s linear infinite;
   white-space: nowrap;
+  color: var(--text-color-light);
 }
 
 .marquee:hover span {
